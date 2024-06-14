@@ -18,7 +18,7 @@ async function getStarship(req, res) {
   const starships = await result.json()
   res.json(starships)
   } catch(error) {
-    console.error('Error getting a Starships:', error)
+    console.error('Error getting a Starship:', error)
     throw error
   }
 }
