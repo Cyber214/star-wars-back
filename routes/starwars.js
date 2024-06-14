@@ -9,6 +9,7 @@ const router = Router()
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
-router.get('/', checkAuth, starwarsCtrl.getAllStarships)
+router.get('/starships', checkAuth, starwarsCtrl.getAllStarships)
+router.get('/starships/:starshipId', checkAuth, starwarsCtrl.getStarship)
 
 export { router }

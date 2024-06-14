@@ -25,7 +25,7 @@ app.use(formData.parse())
 // mount imported routes
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
-app.use('/api/starships', starwarsRouter)
+app.use('/api', starwarsRouter)
 
 // handle 404 errors
 app.use(function (req, res, next) {

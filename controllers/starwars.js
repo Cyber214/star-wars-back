@@ -11,6 +11,19 @@ async function getAllStarships(req, res) {
   }
 }
 
+async function getStarship(req, res) {
+  try {
+    const idx = req.params.starshipId
+  const result = await fetch(`${BASE_URL}/starships/${idx}`)
+  const starships = await result.json()
+  res.json(starships)
+  } catch(error) {
+    console.error('Error getting a Starships:', error)
+    throw error
+  }
+}
+
 export {
   getAllStarships,
+  getStarship,
 }
